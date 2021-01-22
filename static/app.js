@@ -16,7 +16,10 @@ async function add_cupcake(){
         image: image
         }
     })
+    
 
-    $('.cupcake-list').append(`<li>${resp.flavor}</li>`)
+    $('.cupcake-list').append(`<li>${resp.data.cupcake.flavor}</li>`)
     alert("Added New Cupcake!")
+
+    return resp
 }
